@@ -1,0 +1,14 @@
+{
+  "appTitle": "WhatsApp AI",
+  "chats": "Chats",
+  "status": "Status",
+  "calls": "Calls",
+  "settings": "Settings",
+  "privacy": "Privacy",
+  "lastSeen": "Last seen",
+  "online": "online",
+  "typeMessage": "Type a message",
+  "search": "Search",
+  "blockedContacts": "Blocked contacts",
+  "appLock": "App lock"
+}
