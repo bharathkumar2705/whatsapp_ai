@@ -151,7 +151,7 @@ graph TB
 
 1️⃣ **Clone the Repository**
 ```bash
-git clone https://github.com/your-username/whatsapp_ai.git
+git clone https://github.com/bharathkumar2705/whatsapp_ai.git
 cd whatsapp_ai
 ```
 
@@ -247,6 +247,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 *Built with ❤️ for the future of messaging.*
-#   w h a t s a p p _ a i  
- #   w h a t s a p p _ a i  
- 
