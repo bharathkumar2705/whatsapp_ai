@@ -131,36 +131,33 @@ class LinkedDevicesPage extends StatelessWidget {
                     )),
               ],
 
-              if (snapshot.connectionState == ConnectionState.waiting \u0026\u0026 devices.isEmpty) {
-                return const Center(child: CircularProgressIndicator());
-              }
+              if (snapshot.connectionState == ConnectionState.waiting && devices.isEmpty)
+                const Padding(
+                  padding: EdgeInsets.all(32),
+                  child: Center(child: CircularProgressIndicator()),
+                ),
 
-              return ListView(
-                children: [
-                  // ...existing children...
-                  if (otherDevices.isEmpty)
-                    Padding(
-                      padding: const EdgeInsets.all(24),
-                      child: Center(
-                        child: Text(
-                          "No other devices linked",
-                          style: TextStyle(color: Colors.grey[500]),
-                        ),
-                      ),
-                    ),
-
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 8),
+              if (otherDevices.isEmpty && snapshot.connectionState != ConnectionState.waiting)
+                Padding(
+                  padding: const EdgeInsets.all(24),
+                  child: Center(
                     child: Text(
-                      "* Connection status updates every minute. For security, cleanup of inactive devices happens on startup.",
-                      style: TextStyle(color: Colors.grey, fontSize: 10, fontStyle: FontStyle.italic),
-                      textAlign: TextAlign.center,
+                      "No other devices linked",
+                      style: TextStyle(color: Colors.grey[500]),
                     ),
                   ),
+                ),
 
-                  const SizedBox(height: 32),
-                ],
-              );
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                child: Text(
+                  "* Connection status updates every minute. For security, cleanup of inactive devices happens on startup.",
+                  style: TextStyle(color: Colors.grey, fontSize: 10, fontStyle: FontStyle.italic),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+
+              const SizedBox(height: 32),
             ],
           );
         },
