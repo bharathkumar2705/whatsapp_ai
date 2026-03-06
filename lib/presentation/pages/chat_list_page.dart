@@ -57,6 +57,7 @@ class _ChatListPageState extends State<ChatListPage> {
     final uid = authProvider.user?.uid;
     if (uid != null) {
       Provider.of<ChatProvider>(context, listen: false).listenToChats(uid);
+      Provider.of<RewardProvider>(context, listen: false).init(uid);
     }
   }
 
@@ -69,10 +70,13 @@ class _ChatListPageState extends State<ChatListPage> {
 
       if (uid != null) {
         Provider.of<ChatProvider>(context, listen: false).listenToChats(uid);
+        Provider.of<RewardProvider>(context, listen: false).init(uid);
       }
 
       if (authProvider.isAuthenticated) {
-        Provider.of<CallProvider>(context, listen: false).listenToCalls(authProvider.user!.uid);
+        final uid = authProvider.user!.uid;
+        Provider.of<CallProvider>(context, listen: false).listenToCalls(uid);
+        Provider.of<RewardProvider>(context, listen: false).init(uid);
         Provider.of<CallProvider>(context, listen: false).setOnIncomingCall((roomId, callerId) {
           _showIncomingCallDialog(roomId, callerId);
         });

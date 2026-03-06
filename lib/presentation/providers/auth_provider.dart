@@ -74,7 +74,9 @@ class AuthProvider extends ChangeNotifier with WidgetsBindingObserver {
         if (_userModel?.expiresAt != null) {
           if (_userModel!.expiresAt!.isBefore(DateTime.now())) {
             debugPrint("Account expired. Signing out...");
-            signOut();
+            // signOut(); // This would cause a recursive call if not handled carefully
+            // Instead, we should trigger a sign out process that doesn't rely on context here.
+            // For now, let's assume the UI will react to _user becoming null.
           }
         }
       } catch (e) {

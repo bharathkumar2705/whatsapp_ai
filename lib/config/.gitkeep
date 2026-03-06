@@ -1,0 +1,2 @@
+# This file ensures that Git tracks this directory even if it's empty.
+# You can place your app configuration files, API keys (if not gitignored), or environment settings here.
