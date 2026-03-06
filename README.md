@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 📱 WhatsApp AI - Intelligent Messaging & AI Ecosystem
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.11.0%2B-02569B?logo=flutter)](https://flutter.dev)
@@ -247,3 +248,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 *Built with ❤️ for the future of messaging.*
+=======
+# whatsapp_ai
+>>>>>>> 87b30594d744019a8d53a09dd7ff20d94d1f59f5
